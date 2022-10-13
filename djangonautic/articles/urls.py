@@ -1,5 +1,6 @@
 from django.urls import path
-from . import views
+from djangonautic import views
+from articles import views
 
 urlpatterns = [
     path(r'', views.article_list),
