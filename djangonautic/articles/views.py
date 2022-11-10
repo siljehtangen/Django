@@ -10,15 +10,17 @@ def article_list(request):
     return render(request,'article_list.html', {'articles': articles})
 
 def article_detail(request, slug):
-     # return HttpResponse(slug)
     article = Article.objects.get(slug=slug)
     return render(request,'article_detail.html', {'article': article})
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):
-    if request == 'POST':
+    if request.method == 'POST':
         form = forms.CreateArticle(request.POST, request.FILES)
         if form.is_valid():
+            instance = form.save(commit=False)
+            instance.author = request.user
+            instance.save()
             return redirect('articles:list')
     else:
         form = forms.CreateArticle()

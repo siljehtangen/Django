@@ -12,8 +12,65 @@ h1, h2, h3, h4, h5{
     font-weight: normal;
     margin: 0;
 }
-
 a, a:hover, a:visited{
     color: #fff;
     text-decoration: none;
+}
+.wrapper{
+    max-width: 100%;
+}
+div.wrapper h1{
+    text-align: center;
+    font-size: 2em;
+}
+header{
+    font-size: 1em;
+    padding: 20px 0;
+}
+nav li{
+    display: inline-block;
+    margin-right: 5%;
+}
+nav button{
+    background: none;
+    color: whitesmoke;
+    cursor: pointer;
+    border: 0;
+    font-size: 1em;
+}
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.article{
+    top: 50%;
+    padding: 10px;
+    border: 2px solid rgb(14, 153, 14) ;
+    position: relative;
+    padding-bottom: 50px;
+}
+.article-detail .article{
+    padding: 0;
+}
+.article-detail .article img{
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+.article-detail .article h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+.article-detail .article p{
+    text-align: center;
+}
+.article .author{
+    padding: 10px;
+    background-color: rgb(55, 172, 55);
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: black;
 }
