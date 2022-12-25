@@ -74,3 +74,9 @@ nav button{
     margin: 0;
     color: black;
 }
+.site-form{
+    margin-top: 60px;
+    border: 1px solid green;
+    padding: 20px;
+
+}
